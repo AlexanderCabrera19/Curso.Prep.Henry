@@ -1,0 +1,2 @@
+Arrays:
+Podríamos explicarlos como contenedores que almacenan colecciones de datos. Son objetos similares a una lista ordenada a los que podemos referirnos mediante un índice y nombre.
