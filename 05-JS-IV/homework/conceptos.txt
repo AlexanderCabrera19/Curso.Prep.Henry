@@ -1,0 +1,16 @@
+Objetos:
+Colección de propiedades. Estructura de datos que tienen propiedades que están asociadas a un valor.
+
+Propiedades:
+Es una asociación entre un nombre (o clave) y un valor.
+
+Métodos:
+Son funciones guardadas dentro un objeto .
+
+Bucle `for…in`:
+Sirve para iterar sobre las claves (keys) de un objeto.
+
+Notación de puntos vs notación de corchetes:
+Notación de puntos nos da la opción de obtener las propiedades de un objeto.
+La notación se utiliza para indicar qué clave quiero tomar del objeto.
+
