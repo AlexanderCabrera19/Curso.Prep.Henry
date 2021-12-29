@@ -1,0 +1,8 @@
+
+
+
+* `prototype`:
+ Cuando creamos una función en Javascript, el motor el Javascript agrega una propiedad a esta función llamada prototype. Esta propiedad es un objeto que contiene  un constructor por default. En otas palabras, es un mecanismo por el cual un objeto puede heredar de un objeto padre caracteristicas y metodos (funciones).
+
+* _Constructors_ (de Clases):
+Las clases son modelos a seguir, de las cuales podemos generar varios objetos. A partir de las funciones constructoras puedo crear nuevas instancias (objetos) en un futuro.
