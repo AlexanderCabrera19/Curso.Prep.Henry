@@ -1,0 +1,3 @@
+* Funciones Callback:
+Nos permite usar o recibir como parametros a otra funcion.
+Una función callback es una función que se pasa como argumento y luego se la llama dentro de una función externa para completar algún tipo de rutina.
