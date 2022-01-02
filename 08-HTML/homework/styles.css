@@ -1,0 +1,17 @@
+h1{
+    color:teal;
+}
+img{
+    width: 400px;
+}
+#thirdDiv{
+    width: 500px;
+    height: 600px;
+    background-color: gainsboro;
+    padding: 50px;
+    border: 1px solid black;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
