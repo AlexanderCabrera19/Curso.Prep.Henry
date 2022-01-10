@@ -1,0 +1,424 @@
+:root{
+    --main-bg-color: #232323;
+    --body-font-color: #ffffff;
+    --h1-font-body:'Raleway', sans-serif;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --p-font-size: 1.2rem;
+    --titles-color: #acf8cc;
+    --title-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    --boxes-shadow: 0px 0px 22px 20px rgba(0, 0, 0, 0.3); 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:var(--h1-font-body);
+    background-color: var(--main-bg-color);
+    color: var(--body-font-color);
+}
+.container{
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.nav-main{
+    /* background: cornflowerblue; */
+    display: flex;
+    justify-content: end;
+    width: 80%;
+    margin: 0 auto;
+}
+.nav-main ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+    /* width: 30%; */
+    /* height: 40px; */
+    /* align-content:center; */
+    /* background: crimson; */
+
+}
+.nav-main ul li{
+    list-style: none;
+    margin: 0 5px;
+    margin-top: 20px;
+    /* display: inline-flex;
+    align-items: center; */
+    /* height: 40px; */
+}
+.nav-main ul li a{
+    text-decoration: none;
+    color: var(--body-font-color);
+    background: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    position: relative;
+    transition: .3s ease all;
+    font-weight: 500;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+.nav-main ul li a span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.nav-main ul li a::after{
+    content: '';
+    width: 100%;
+    height: 40px; 
+    background:#afb3b2;
+    /* background:#acf8cc; */
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    left: 0;
+    transition: .3s ease-in-out all;
+    /* border: 1px solid #afb3b2; */
+
+}
+
+.nav-main ul li a:hover{
+    color: var(--main-bg-color);
+}
+
+.nav-main ul li a:hover::after{
+    top: 0;
+}
+
+.banner{
+    background-image: url(./alex-image-bg.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 800px;
+    color:var(--body-font-color);
+    box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.title{
+    /* text-align: center; */
+    /* margin: 0 100px; */
+    width: 100%;
+    height: 750px;
+    /* background: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: end;
+    /* margin: 0 auto;*/
+}
+.title-contenido{
+    /* background: lightblue; */
+    /* margin:0 auto; */
+    width: 85%;
+    text-align: center;
+    height: 300px;
+}
+@media screen and (max-width: 750px) {
+    .nav-main{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-main ul li a{
+        border: 1px solid #afb3b2;
+        padding: auto;
+    }
+    .title-contenido{
+        width: 90%;
+        height: 400px;
+    }
+    .title h1{
+        line-height: 6.5rem !important;
+    }
+}
+@media screen and (max-width: 500px){
+    .title-contenido{
+        width: 100%;
+        height: 330px;
+    }
+    .title h1{
+        /* background-color: coral; */
+        font-size: 5rem !important;
+        line-height: 4.5rem !important;
+    }
+}
+@media screen and (max-width:450px) {
+    .title-contenido{
+        width: 95%;
+    }
+    .title h1{
+        font-size: 3.3rem !important;
+    }
+    .title h2{
+        /* font-size: 1.8rem !important; */
+        flex-wrap: wrap;
+    }
+}
+
+.title h1{
+    width: 100%;
+    /* margin: 0px 0 25px 0; */
+    font-size: 5.5rem;
+    font-weight: 700;
+    /* letter-spacing: 0.1rem; */
+    line-height: 7rem;
+    color: var(--titles-color);
+    /* background: chocolate; */
+    text-shadow: var(--title-shadow);
+}
+.title h2{
+    font-size: 2.5rem;
+    /* font-weight: bold; */
+    line-height: 2.6rem;
+    margin-bottom: 30px;
+    text-shadow: var(--title-shadow)
+}
+.btn{
+    padding: 15px;
+    background: #acf8cc;
+    border-radius: 3px;
+    border: 1px solid #acf8cc;
+    transition: .4s all;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #232323;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.title a:hover{
+    background: #232323;
+    color: #acf8cc;
+}
+
+
+/* ESTILOS SECTION ABOUTME */
+#aboutMe{
+    margin-top: 50px;
+}
+.personalDescription{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 40px 0; 
+    box-shadow: var(--boxes-shadow);
+    /* height: 300px; */
+}
+
+.personalDescription .img-alex{
+    background-image: url(./alexander.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* background-color: coral; */
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    justify-self: center;
+    border: 6px solid #f1f1f1;
+    box-shadow: -12px 12px 0px 1px #000000cc;
+}
+
+.description-content{
+    text-align: center;
+    /* background: chocolate; */
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    
+}
+.description-content h1{
+    font-size: var(--h1-font-size);
+    margin-bottom: 15px;
+    text-shadow: var(--title-shadow);
+    color: var(--titles-color);
+}
+.description-content p{
+    font-size:var(--p-font-size);
+    margin: 20px;
+}
+
+.education-and-workExperiences{
+    /* background: chocolate; */
+    margin-top: 50px;
+    padding: 40px 0; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    box-shadow: var(--boxes-shadow);
+}
+.container-education{
+    margin: 0 auto;
+    width: 90%;
+    display: inline-flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.container-education .carrers{
+    margin: 0 auto;
+    text-align: center;
+}
+.container-education h1{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: 30px;
+    /* padding-bottom: 10px; */
+    position: relative;
+    text-shadow: var(--title-shadow);
+    color: var(--titles-color);
+}
+.container-education .studies h2{
+    font-size: var(--h2-font-size);
+}
+.container-education .studies p{
+    font-size: var(--p-font-size);
+    padding: 3px 0 15px 0;
+}
+.container-workExperiences{
+    width: 90%;
+    margin: 0 auto;
+}
+.container-workExperiences h1{
+    font-size: var(--h1-font-size);
+    text-align: center;
+    color: var(--titles-color);
+    text-shadow: var(--title-shadow);
+    margin-bottom: 30px;
+}
+.container-workExperiences .jobs{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container-workExperiences .jobs h2{
+    font-size: var(--h2-font-size);
+    text-align: center;
+}
+.container-workExperiences .jobs h3{
+    color: var(--titles-color);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.container-workExperiences .jobs p{
+    font-size: var(--p-font-size);
+    padding: 2px 0;
+}
+
+/* GRILLA CON SKILLS */
+.skills{
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px 0;
+    box-shadow: var(--boxes-shadow);
+}
+.skills h1{
+    font-size: var(--h1-font-size);
+    color: var(--titles-color);
+    text-align: center;
+    text-shadow: var(--title-shadow);
+}
+.skills .grilla-skills{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+    /* background-color: yellowgreen; */
+    column-gap: 10px;
+}
+
+.skills .grilla-skills .skill:nth-child(1),
+.skills .grilla-skills .skill:nth-child(2),
+.skills .grilla-skills .skill:nth-child(3),
+.skills .grilla-skills .skill:nth-child(4),
+.skills .grilla-skills .skill:nth-child(5),
+.skills .grilla-skills .skill:nth-child(6),
+.skills .grilla-skills .skill:nth-child(7),
+.skills .grilla-skills .skill:nth-child(8),
+.skills .grilla-skills .skill:nth-child(9),
+.skills .grilla-skills .skill:nth-child(10),
+.skills .grilla-skills .skill:nth-child(11){
+    background-image: url(./assets/skill_html.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    align-self: center;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column-reverse;
+    border: 5px solid #acf8cc;
+}
+.skills .grilla-skills .skill:nth-child(2){
+    background-image: url(./assets/skill_css3.png);
+}
+.skills .grilla-skills .skill:nth-child(3){
+    background-image: url(./assets/skill_sass.png);
+}
+.skills .grilla-skills .skill:nth-child(4){
+    background-image: url(./assets/skill_bootstrap.png);
+}
+.skills .grilla-skills .skill:nth-child(5){
+    background-image: url(./assets/skill_git.png);
+}
+.skills .grilla-skills .skill:nth-child(6){
+    background-image: url(./assets/skill_github.png);
+}
+.skills .grilla-skills .skill:nth-child(7){
+    background-image: url(./assets/skill_js.png);
+}
+.skills .grilla-skills .skill:nth-child(8){
+    background-image: url(./assets/skill_jquery.png);
+}
+.skills .grilla-skills .skill:nth-child(9){
+    background-image: url(./assets/skill_figma.png);
+}
+.skills .grilla-skills .skill:nth-child(10){
+    background-image: url(./assets/skill_ps.png);
+}
+.skills .grilla-skills .skill:nth-child(11){
+    background-image: url(./assets/skill_vscode.png);
+}
+
+.skills .grilla-skills .skill h2{
+    font-size: var(--h2-font-size);
+    text-align: center;
+    background:var(--titles-color);
+    box-shadow: var(--title-shadow);
+    border-radius: 5px;
+    /* text-shadow: var(--title-shadow); */
+    color: var(--main-bg-color);
+}
+
+
+@media screen and (max-width: 900px){
+    .personalDescription{
+        grid-template-columns: 1fr;
+    }
+    .personalDescription .img-alex{
+        margin-bottom: 30px;
+    }
+    .education-and-workExperiences{
+        grid-template-columns: 1fr;
+    }
+    .container-education{
+        margin-bottom: 50px;
+    }
+    .skills .grilla-skills{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 700px) {
+    .skills .grilla-skills{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
